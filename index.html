@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/style.css"> 
+    <link rel = "stylesheet" href = "css/responsive.css">
+    <link rel="icon" href="assets/Logo.jpg"  type="image/x-icon">
+    <script src="js/home.js" defer></script>
+    <title>SubblyHup.Shop</title>
+</head>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scrollbar-width: none;
+}
+img {
+    image-rendering: auto;
+}
+body{
+    margin : 0;
+    background-color: rgb(248, 248, 248);
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 1s ease;
+}
+.fade-out {
+    opacity: 0;
+}
+</style>
+
+<script>
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        const loadingScreen = document.getElementById('loading-screen');
+        
+        loadingScreen.classList.add('fade-out');
+
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            
+            const mainContent = document.getElementById('page-container');
+            mainContent.style.display = 'block';
+        }, 1000);
+        
+    }, 1000);
+});
+</script>
+
+<body>
+    <div id = "loading-screen">
+    </div>
+    <div id = "page-container">
+        <div id = "anh-bia">
+            <img src="assets/study-table.jpg">
+        </div>
+        <!--Thanh tiện ích-->
+        <div id ="thanh-tien-ich" class="medium-container">
+            <!--Logo-->
+            <a id="logo" href="index.html">
+                <img src="assets/logo.jpg">
+            </a>
+            <!--Thanh tìm kiếm-->
+            <div id ="thanh-tim-kiem">
+                <div  class="khung-tien-ich">
+                    <a class="button-tien-ich" id = "menuDT">
+                        <img src="assets/list.jpg"">
+                    </a>
+                </div>
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <!--Giỏ hàng-->
+            <div  class="khung-tien-ich">
+                <a class="button-tien-ich" id = "gioHang">
+                    <img src="assets/cart.jpg"">
+                </a>
+    
+                <a class="button-tien-ich">
+                    <img src="assets/megaphone.jpg" id = "tinTuc">
+                </a>
+    
+                <a class="button-tien-ich">
+                    <img src="assets/user.jpg" id = "taiKhoan">
+                </a> 
+            </div>
+        </div>
+        
+        <div id = "menu">
+            <a>
+                <img src="assets/book.jpg" class = "small-icon">
+                <b class="medium-text">Sách & Truyện</b>
+            </a>
+            <a>
+                <img src="assets/pencil.jpg" class = "small-icon">
+                <b class="medium-text">Bút viết</b>
+            </a>
+            <a>
+                <img src = "assets/notebook.jpg" class = "small-icon">
+                <b class="medium-text">Giấy & Vở</b>
+            </a>
+            <a>
+                <img src = "assets/toy-train.jpg" class = "small-icon">
+                <b class="medium-text">Đồ chơi</b>
+            </a>
+            <a>
+                <img src = "assets/belongings.jpg" class = "small-icon">
+                <b class="medium-text">Khác</b>
+            </a>
+        </div>
+
+        <div id="main-container">
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Sách & Truyện</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div class="content" id="ST"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Bút viết</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div  class="content" id = "BV"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Giấy & Vở</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div  class="content" id = "GV"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Đồ chơi</b>
+                    <a>
+                         <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div class="content" id = "DC"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Khác</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div  class="content" id = "KH"></div>
+            </div>
+        </div>
+        <div id = "footer"></div>
+    </div>
+</body>
+
+</html> 
