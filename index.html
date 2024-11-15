@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/style.css"> 
+    <link rel = "stylesheet" href = "css/responsive.css">
+    <link rel = "stylesheet" href = "css/formDki.css">
+    <link rel="icon" href="assets/Logo.jpg"  type="image/x-icon">
+    <script src="js/home.js" defer></script>
+    <script src="js/formDki.js" defer></script>
+    <title>SubblyHup.Shop</title>
+</head>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scrollbar-width: none;
+}
+img {
+    image-rendering: auto;
+}
+body{
+    margin : 0;
+    background-color: rgb(248, 248, 248);
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 1s ease;
+}
+.fade-out {
+    opacity: 0;
+}
+</style>
+
+<script>
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        const loadingScreen = document.getElementById('loading-screen');
+        
+        loadingScreen.classList.add('fade-out');
+
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            
+            const mainContent = document.getElementById('page-container');
+            mainContent.style.display = 'block';
+        }, 1000);
+        
+    }, 1000);
+});
+</script>
+
+<body>
+    <div id = "loading-screen">
+    </div>
+    <div id = "page-container">
+        <div id = "anh-bia">
+            <img src="assets/study-table.jpg">
+        </div>
+        <!--Thanh tiện ích-->
+        <div id ="thanh-tien-ich" class="medium-container">
+            <!--Logo-->
+            <a id="logo" href="index.html">
+                <img src="assets/logo.jpg">
+            </a>
+            <!--Thanh tìm kiếm-->
+            <div id ="thanh-tim-kiem">
+                <div  class="khung-tien-ich">
+                    <a class="button-tien-ich" id = "menuDT">
+                        <img src="assets/list.jpg"">
+                    </a>
+                </div>
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <!--Giỏ hàng-->
+            <div  class="khung-tien-ich">
+                <a class="button-tien-ich" id = "gioHang">
+                    <img src="assets/cart.jpg"">
+                </a>
+    
+                <a class="button-tien-ich" id = "tinTuc">
+                    <img src="assets/megaphone.jpg">
+                </a>
+    
+                <a class="button-tien-ich" onclick="batdau()" id = "taiKhoan">
+                    <img src="assets/user.jpg">
+                    <p style="text-align: left;" id = "welcome" class="small-text"></p>
+                </a> 
+            </div>
+        </div>
+        
+        <div id = "menu">
+            <a>
+                <img src="assets/book.jpg" class = "small-icon">
+                <b class="medium-text">Sách & Truyện</b>
+            </a>
+            <a>
+                <img src="assets/pencil.jpg" class = "small-icon">
+                <b class="medium-text">Bút viết</b>
+            </a>
+            <a>
+                <img src = "assets/notebook.jpg" class = "small-icon">
+                <b class="medium-text">Giấy & Vở</b>
+            </a>
+            <a>
+                <img src = "assets/toy-train.jpg" class = "small-icon">
+                <b class="medium-text">Đồ chơi</b>
+            </a>
+            <a>
+                <img src = "assets/belongings.jpg" class = "small-icon">
+                <b class="medium-text">Khác</b>
+            </a>
+        </div>
+
+        <div id="main-container">
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Sách & Truyện</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div class="content" id="ST"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Bút viết</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div  class="content" id = "BV"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Giấy & Vở</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div  class="content" id = "GV"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Đồ chơi</b>
+                    <a>
+                         <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div class="content" id = "DC"></div>
+            </div>
+    
+            <div class="khung-content">
+                <hr class="thanh-content">
+                <div class="content-name">
+                    <b class="big-text">Khác</b>
+                    <a>
+                        <b class="big-text">Xem thêm</b>
+                    </a>
+                </div>
+                <div  class="content" id = "KH"></div>
+            </div>
+        </div>
+        <div id = "footer"></div>
+    </div>
+
+    <!--Form-->
+    <div id = "form-container">
+        <div class="mainDnhap">
+            <form onsubmit="return kiemTraRongKhiDnhap() && false;" id = "formDN">
+                <div class="form-logo">
+                    <img src="assets/logo.jpg" style="height: 50px;">
+                </div> 
+                <div>
+                    <div style="text-align: center;font-family: Arial, Helvetica, sans-serif; "><h2><u><strong>ĐĂNG NHẬP</strong></u></h2></div>
+                    
+                </div>
+                <div class="contentDnhap">
+                    <div>Tên Đăng Nhập :</div>
+                    <input type="text" placeholder="Nhập tên đăng nhập"  class="thongtinDnhap" id="tendangnhap">
+                    <div>Mật Khẩu :</div>
+                    <input type="password" placeholder="Nhập mật khẩu" class="matkhauDnhap" id="matkhau">
+                </div>
+                <div class="chuanutdangnhap">
+                    <button type="submit" class="dangki_button">Đăng Nhập</button>
+                </div>
+                <div class="endline">
+                    <div>Bạn chưa có tài khoản?</div>  
+                    <div class="endline2" title="Nhấn để đăng kí tài khoản" onclick="chuyentrangdangki();">Đăng kí</div>      
+                </div>          
+                <div class="quenmatkhau">
+                    <div onclick="chuyentrangquenmk();">Quên mật khẩu ?</div>
+                </div>
+            </form>
+            <div class="chuanutclose">
+                <button onclick="closeWindowDangnhap()" class="close_button" title="Close">x</button> 
+            </div>
+        </div>
+
+        <div class="mainDkiTk">
+            <form onsubmit="return kiemTraRongKhiDKi()&& false;" id="formDki">
+                <div class="form-logo">
+                    <img src="assets/logo.jpg" style="height: 50px;">
+                </div>
+                <div>
+                    <div style="text-align: center; font-family:Arial, Helvetica, sans-serif ;"><h2><u><strong>ĐĂNG KÍ TÀI KHOẢN</strong></u></h2></div>
+                </div>
+
+                <div class="contentDkiTk">
+                    <div class="left">
+                        <div>Họ và Tên</div>
+                        <input type="text" placeholder="Nhập họ và tên" style="margin: 4px; border-color: black; width:70%;height: 26px;" id="hoten">
+                    </div>
+
+                    <div class="right">
+                        <div>Giới Tính</div>
+                        <input type="radio" style="margin: 10px;padding: 5px;" name="RadioName" value="Nam" id="nam">Nam
+                        <input type="radio" style="margin: 10px;padding: 5px;" name="RadioName" value="Nam" id="nu">Nữ
+                    </div>
+                </div>
+                <div class="normal">
+                    <div>Email</div>
+                    <input type="text" placeholder="Nhập email" class="thongtinDkiTk" id="email">
+                    <div>Địa Chỉ</div>
+                    <input type="text" placeholder="Nhập địa chỉ" class="thongtinDkiTk" id="diachi">
+                    <div>Số Điện Thoại</div>
+                    <input type="text" placeholder="Nhập số điện thoại" class="thongtinDkiTk" id="sodienthoai">
+                    <hr style="margin:20px; height: 4px; background-color: black;">
+                    <div>Tên Đăng Nhập</div>
+                    <input type="text" placeholder="Nhập tên đăng nhập" class="thongtinDkiTk" id="tendangnhapkhidki">
+                    <div>Mật Khẩu</div>
+                    <input type="password" placeholder="Nhập mật khẩu" class="matkhauDkiTk" id="nhapmk">
+                    <div>Nhập Lại Mật Khẩu</div>
+                    <input type="password" placeholder="Xác nhận mật khẩu" class="matkhauDkiTk" id="nhaplaimk">
+                </div>   
+                <div class="chuanutdangkiTK">
+                    <button class="dangki_button" type="submit">Đăng Kí</button>
+                </div>
+            </form>
+            <div class="chuanutclose">
+                <button onclick="closeWindowDangKi()" class="close_button" title="Close">x</button> 
+            </div>
+        </div>
+
+        <div class="mainQuenMK">
+            <form onsubmit="return kiemTraRongKhiLayLaiMK() && false;" id = "formQMk">
+                <div class="form-logo">
+                    <img src="assets/logo.jpg" style="height: 50px;">
+                </div> 
+                <div>
+                    <div style="text-align: center;font-family: Arial, Helvetica, sans-serif; "><h2><u><strong>QUÊN MẬT KHẨU</strong></u></h2></div>
+                </div>
+                <div class="contentQuenMK">
+                    <div>Tên Đăng Nhập :</div>
+                    <input type="text" placeholder="Nhập tên đăng nhập"  class="thongtinQuenMK" id="tendangnhaplaymk">
+                    <div>Nhập số điện thoại của bạn :</div>
+                    <input type="password" placeholder="Nhập số điện thoại" class="matkhauQuenMK" id="sodienthoailaymk">
+                </div>
+                <div class="chuanutGuiMess">
+                    <button type="submit" class="dangki_button">Gửi Message Tới SĐT</button>
+                </div>
+            </form>
+            <div class="chuanutclose">
+                <button onclick="closeWindowQuenMK()" class="close_button" title="Close">x</button> 
+            </div>
+        </div>
+
+        <div class="mainDkiThCong" >
+            <div class="form-logo">
+                <img src="assets/logo.jpg" style="height: 50px;">
+            </div>
+            <div>
+                <div style="text-align: center; font-family:Arial, Helvetica, sans-serif ;"><h2><u><strong>ĐĂNG KÍ TÀI KHOẢN</strong></u></h2></div>
+                <div class="chuanutclose">
+                    <button onclick="closeWindowDkiThCong()" class="close_button" title="Close">x</button> 
+                </div>
+            </div>
+            <div class="vitrithongbao">
+                <marquee style="display: block;"><h2></h2></marquee>
+            </div>
+            <div class="chuanutdangnhapngay">
+                <button class="dangki_button" onclick="chuyentrangdangnhap()">Đăng Nhập Ngay</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> 
