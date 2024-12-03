@@ -1,0 +1,204 @@
+#form-container{
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.form-logo{
+    position: absolute;
+    top:5px;left:5px;
+}
+
+.chuanutclose{
+    position: absolute; 
+    top:5px; right:5px;
+}
+.close_button{
+    text-align: center;
+    cursor: pointer; font-size: 20px;
+    background-color: black; color:white;
+    width: 40px; border-color: black;
+}  
+.close_button:hover {
+    transform: scale(1.1); /* Phóng to 1.2 lần */
+}
+.dangki_button{ 
+    color: white; background-color: black;
+    border-color: black;                
+    border-radius: 10px;
+    height: 40px;
+    width: 30%; /* Đặt chiều rộng để căn giữa tốt hơn */     
+    text-align: center;
+    cursor: pointer;
+}
+
+.dangki_button:hover {
+    transform: scale(1.05); /* Phóng to 1.2 lần */
+}
+
+.left, .right {
+    text-align: center;
+    width: 50%;
+}
+.endline{
+    position: absolute; bottom: 40px;
+    display: flex; justify-content: center; width: 100%;
+}
+.endline2{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.quenmatkhau{
+    position: absolute; bottom: 5px; right:5px; 
+    cursor: pointer; 
+    color: red;
+}
+.normal{
+    text-align: center;
+}
+.vitrithongbao{
+    position: absolute; /* Để đặt nó ở vị trí phù hợp */
+    width: 100%;
+    top: 120px;
+    text-align: center;
+}
+.mainDkiTk{
+    width: 450px; 
+    height: 570px;
+    border: 1px solid black;
+    padding : 10px;
+    position: relative;
+    display: none;
+    background-color: white;
+}  
+.chuanutdangkiTK{
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: absolute; /* Để đặt nó ở vị trí phù hợp */
+    bottom: 10px; /* Đặt vị trí gần đáy */
+    width: 100%;
+} 
+.thongtinDkiTk{
+    margin: 4px; padding: 4px; border-color: black;
+    width:85%;
+}
+.matkhauDkiTk{
+    width:85%;
+    margin: 4px; padding: 4px; border-color: black;
+}
+.contentDkiTk{
+    margin-top: 45px;
+    text-align: center;
+    display: flex;
+} 
+
+.mainDnhap{
+    width: 450px; 
+    height: 350px;
+    border: 1px solid black;
+    padding : 10px;
+    position: relative;
+    display: none;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.chuanutdangnhap{
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: absolute; /* Để đặt nó ở vị trí phù hợp */
+    bottom: 70px; /* Đặt vị trí gần đáy */
+    width: 100%;
+}
+.contentDnhap {
+    text-align: center; margin-top: 65px;
+    
+}
+.thongtinDnhap{
+    margin: 4px; padding: 4px; 
+    text-align: center; border-color: black;
+}
+.matkhauDnhap{
+    text-align: center; 
+    margin: 4px; padding: 4px; border-color: black;
+} 
+
+.mainDkiThCong{
+    width: 450px; 
+    height: 300px;
+    border: 1px solid black;
+    padding : 10px;
+    position: relative;
+    display: none;
+    background-color: white;
+}
+.chuanutdangnhapngay{
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: absolute; /* Để đặt nó ở vị trí phù hợp */
+    bottom: 8px; /* Đặt vị trí gần đáy */
+    width: 100%;
+}
+
+.mainQuenMK{
+    width: 450px; 
+    height: 350px;
+    border: 1px solid black;
+    padding : 10px;
+    position: relative;
+    display:none;
+    background-color: white;
+    padding: 0;
+}
+.chuanutGuiMess{
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: absolute; /* Để đặt nó ở vị trí phù hợp */
+    bottom: 70px; /* Đặt vị trí gần đáy */
+    width: 100%;
+}
+.contentQuenMK {
+    text-align: center; margin-top: 65px;
+    
+}
+.thongtinQuenMK{
+    margin: 4px; padding: 4px; 
+    text-align: center; border-color: black;
+}
+.matkhauQuenMK{
+    text-align: center;
+    margin: 4px; padding: 4px; border-color: black;
+}
+.chuabutton{
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: absolute; /* Để đặt nó ở vị trí phù hợp */
+    bottom: 20px; /* Đặt vị trí gần đáy */
+    width: 100%;
+}
+
+.menuTK-content { 
+    display: none; 
+    position: absolute; 
+    background: white; 
+    border: 1px solid #ccc;
+}
+
+.menuTK-content a { 
+    display: block; 
+    padding: 5px 10px; 
+    text-decoration: none; 
+    color: black; 
+    border: solid black 1px;
+}
+
+.menuTK-content a:hover { 
+      background: #f0f0f0; 
+}

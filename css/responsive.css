@@ -1,0 +1,239 @@
+#anh-bia{
+    width: 100%;
+    height: 30vh;
+}
+/**------------------------------------------------------------------------------------------
+Logo và Search
+------------------------------------------------------------------------------------------**/
+#thanh-tien-ich{
+    width: 100%;
+    height: 18vh;
+}
+
+#logo{
+    margin-left: 6%;
+    height: 90%;
+    max-width: 10%;
+}
+
+#thanh-tim-kiem{
+    height: 100%;
+    margin-left: 3%;
+    margin-right: 1%;
+    width: 57%;
+}
+
+#thanh-tim-kiem input{
+    border-radius: 8px;
+    height: 35%;
+    width: 100%;
+    padding: 12px 20px;
+    margin-left: 5%;
+}
+
+
+.button-tien-ich{
+    width: 20%;
+    height: 40%;
+}
+
+.button-tien-ich img{
+    max-height: 100%;
+    margin-right: 3%;
+}
+
+#menuDT{
+    width: 80%;
+    display: none;
+}
+/**------------------------------------------------------------------------------------------
+Menu
+------------------------------------------------------------------------------------------**/
+#menu{
+    width: 16%;
+    margin-left: 2%;
+    top: 20px;
+    margin-top: 4%;
+}
+
+#menu a{
+    width: 100%;    
+    margin-bottom: 7%;
+    padding: 5px;
+    line-height: 40px;
+    border-radius: 0.5rem;
+}
+/**------------------------------------------------------------------------------------------
+Content
+------------------------------------------------------------------------------------------**/
+#main-container{
+    width: 74%;
+    justify-self: center;
+}
+
+.image-container {
+    margin-top: 1.8%;
+    margin-bottom:2%;
+        
+    width: 20%;
+    height: 340px;
+
+    border-radius: 5%;
+    padding-top: 1.5%;
+}
+
+.image-container img{
+    margin-top: 3%;
+    width: 65%;
+    height: 60%;
+    border-radius: 5%;
+}
+
+.small-button-container{
+    height: 25px;
+}
+
+#num-page{
+    line-height: 25px;
+}
+/**------------------------------------------------------------------------------------------
+Footer
+------------------------------------------------------------------------------------------**/
+#footer{
+    height: 35vh;
+}
+/**------------------------------------------------------------------------------------------
+Dùng chung
+------------------------------------------------------------------------------------------**/
+.small-icon{
+    width: 15%;
+    height: 15%;
+    margin-right: 5%;
+}
+.chu-nho{
+    font-size: 14px;
+}
+.chu-binh-thuong{
+    font-size: 18px;
+}
+
+.chu-lon{
+    font-size: 24px;
+}
+
+@media only screen and (min-width: 2560px) {
+    #menu{
+        width: 18%;
+    }
+
+    #main-container{
+        width: 1400px;
+        margin-left: 5%;
+    }
+    
+    .image-container {
+        height: 360px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    #menu{
+        width: 13%;
+    }
+    #thanh-tim-kiem{
+        width: 58%;
+    }
+    #thanh-tim-kiem input{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    #main-container{
+        float: none;
+    }
+    #menu{
+        display: none;
+    }
+    .Ad{
+        width: 92%;
+        margin-bottom: 4%;
+    }
+    #thanh-tien-ich{
+        height: 14vh;
+        position: sticky;
+        top: 0px;
+        z-index: 999;
+    }
+
+    #menuDT{
+        display: block;
+    }
+
+    #thanh-tim-kiem{
+        width: 50%;
+    }
+
+    #main-container{
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 987px) {
+    #thanh-tien-ich{
+        height: 8vh;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    #anh-bia{
+        width: 100%;
+        height: 10vh;
+    }
+
+
+    .image-container{
+        height: 18vh;
+        overflow: hidden;
+    }
+
+    #footer{
+        height: 15vh;
+    }
+
+    .small-text{
+        font-size: 11px;
+    }
+    
+    .medium-text{
+        font-size: 13px;
+    }
+    s
+    .big-text{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    #logo{
+        margin-left: 3%;
+    }
+
+    #main-container{
+        width: 100%;
+    }
+    .image-container{
+        height: 120px;
+    }
+
+    .image-container p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .khung-tien-ich{
+        overflow: hidden;
+    }
+}
