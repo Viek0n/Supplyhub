@@ -422,14 +422,6 @@ function search(){
 /*------------------------------------------------------------------------------------------
 Dùng khi mở trang
 ------------------------------------------------------------------------------------------*/
-loadProduct();
-displayAll();
-scaleAd();
-search();
-window.onresize = function(){
-    scaleAd();
-}
-
 const products = [
     {ProductId: 1, image: "01.jpg", name: "5 Centimet Trên Giây", price: 93000, discount: 0, nxb: "NXB Tiếng Việt IPM", tacgia: "Makoto Shinkai", type: 1},
     {ProductId: 2, image: "02.jpg", name: "Đường hầm tới mùa hạ - Lối thoát của biệt ly", price: 120000, discount: 0, nxb: "NXB Tiếng Việt IPM", tacgia: "Mokune Hachi", type: 1},
@@ -534,3 +526,10 @@ const products = [
     ];
     
 localStorage.setItem("products", JSON.stringify(products));
+loadProduct();
+displayAll();
+scaleAd();
+search();
+window.onresize = function(){
+    scaleAd();
+}
